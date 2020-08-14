@@ -1,0 +1,2 @@
+export const RETURN_ERRORS = "RETURN_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
