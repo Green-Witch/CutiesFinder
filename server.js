@@ -24,6 +24,17 @@ app.use(geo_locate);
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", require("./routes/api/root"));
 
+// =======================
+//    Production mode
+// =======================
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client", "build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"))
+  );
+}
+
 // ==============================
 //        Error-handler
 // ==============================
