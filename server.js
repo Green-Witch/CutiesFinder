@@ -22,7 +22,7 @@ app.use(geo_locate);
 //          Routes
 // ==============================
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/api", require("./routes/api"));
+app.use("/api", require("./routes/api/root"));
 
 // ==============================
 //        Error-handler
