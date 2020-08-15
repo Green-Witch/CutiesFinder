@@ -4,7 +4,7 @@
   "description": "Cuties-Finder brings together people who wants to put pets for adoption with people looking to adopt in an effort to give unwated pets a new home",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server.js",
     "backend-dev": "nodemon server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
